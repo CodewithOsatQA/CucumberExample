@@ -1,5 +1,16 @@
 Feature: googleTest
-	Scenario: find kitten images on google
+
+==============================
+===	Information:
+An example of how we can use scenario outline with the examples keyword to declare 
+a table header and pass each entry to our scenario.
+
+	Scenario Outline: find "<Animals>" images on google
 		Given we can open google
-		When we search for kittens
-		Then google will return us images of kittens
+		When we search for "<Animals>"
+		Then google will return us image of "<Animals>"
+		
+	Examples:
+	| 	Animals	|
+	| 	kittens	|
+	| 	puppies |
